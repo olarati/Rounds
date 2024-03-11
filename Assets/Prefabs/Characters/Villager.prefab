@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 6931523516975069482}
   - component: {fileID: 1941628697641717372}
   - component: {fileID: 8303744229125423803}
-  - component: {fileID: 7409617542057910867}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -250,29 +249,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7409617542057910867
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280151750320996391}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &382728154678733840
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +601,6 @@ GameObject:
   - component: {fileID: 5222293382810708807}
   - component: {fileID: 3342830197610393149}
   - component: {fileID: 828344765072333079}
-  - component: {fileID: 6856901636375524267}
   m_Layer: 0
   m_Name: ShoulderStrapR
   m_TagString: Untagged
@@ -698,29 +673,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6856901636375524267
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509003493677546073}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &760833213728820705
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +684,6 @@ GameObject:
   - component: {fileID: 5102245035072084938}
   - component: {fileID: 7650309782090914711}
   - component: {fileID: 522855075861344322}
-  - component: {fileID: 7585061982644819507}
   m_Layer: 0
   m_Name: HatBrim
   m_TagString: Untagged
@@ -805,29 +756,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7585061982644819507
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760833213728820705}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &958833110740453920
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,7 +3296,6 @@ GameObject:
   - component: {fileID: 7581073698831623767}
   - component: {fileID: 2962382038692905530}
   - component: {fileID: 1381617505692641569}
-  - component: {fileID: 7558687191457767111}
   m_Layer: 0
   m_Name: ShoulderStrapL
   m_TagString: Untagged
@@ -3441,29 +3368,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7558687191457767111
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8914314123077962841}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9131250379876274607
 GameObject:
   m_ObjectHideFlags: 0

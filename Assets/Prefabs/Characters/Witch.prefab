@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4026001284725846844}
   - component: {fileID: 5845149814474142592}
   - component: {fileID: 5158565183220010802}
-  - component: {fileID: 6297161739597672126}
   m_Layer: 0
   m_Name: Buckle_Outer
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6297161739597672126
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141244262054742805}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &480187031311301608
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +162,6 @@ GameObject:
   - component: {fileID: 3987332527283352923}
   - component: {fileID: 1410251102446370297}
   - component: {fileID: 4134774258143271600}
-  - component: {fileID: 2641533036602494265}
   m_Layer: 0
   m_Name: Stem_2
   m_TagString: Untagged
@@ -257,29 +234,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2641533036602494265
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122065063453601913}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1839720531376367474
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +531,6 @@ GameObject:
   - component: {fileID: 5587926655626003079}
   - component: {fileID: 3985676072962586065}
   - component: {fileID: 6809769361267390742}
-  - component: {fileID: 5434091731782703614}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -650,29 +603,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5434091731782703614
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3341308970626235274}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3400499530389878245
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +865,6 @@ GameObject:
   - component: {fileID: 1088453096724404155}
   - component: {fileID: 6264334804092981510}
   - component: {fileID: 2156238291574527209}
-  - component: {fileID: 2645217867632439038}
   m_Layer: 0
   m_Name: Buckle_Inner
   m_TagString: Untagged
@@ -1008,27 +937,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2645217867632439038
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5631950686778346188}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5972519774485125176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +948,6 @@ GameObject:
   - component: {fileID: 4978347733896700795}
   - component: {fileID: 8094482123309369840}
   - component: {fileID: 2367590194199814823}
-  - component: {fileID: 716241470375531605}
   m_Layer: 0
   m_Name: Stem_4
   m_TagString: Untagged
@@ -1113,29 +1020,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &716241470375531605
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5972519774485125176}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5982272966568438274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1116,6 @@ GameObject:
   - component: {fileID: 6337901587278388102}
   - component: {fileID: 7360119691374274381}
   - component: {fileID: 3155300062811302473}
-  - component: {fileID: 857236551003323402}
   m_Layer: 0
   m_Name: Stem_1
   m_TagString: Untagged
@@ -1305,29 +1188,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &857236551003323402
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6098323861774182254}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6368738470970103908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1199,6 @@ GameObject:
   - component: {fileID: 8914272731194814980}
   - component: {fileID: 1265990136365460219}
   - component: {fileID: 8363084399547564131}
-  - component: {fileID: 6896210368100545394}
   m_Layer: 0
   m_Name: Brim
   m_TagString: Untagged
@@ -1412,29 +1271,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6896210368100545394
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6368738470970103908}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &7229750329205529017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1484,6 @@ GameObject:
   - component: {fileID: 4757887164872148933}
   - component: {fileID: 6732526743518280628}
   - component: {fileID: 2343771065875105290}
-  - component: {fileID: 3852448596535539898}
   m_Layer: 0
   m_Name: Stem_3
   m_TagString: Untagged
@@ -1721,29 +1556,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3852448596535539898
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321969890596260903}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8464398624801504992
 GameObject:
   m_ObjectHideFlags: 0
