@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4405275127345052291}
+  - component: {fileID: 5362930200457729003}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -25,13 +26,25 @@ Transform:
   m_GameObject: {fileID: 2051836966652874207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.18, z: 0.91}
+  m_LocalPosition: {x: 0, y: 0.18, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3422590558573345644}
   m_Father: {fileID: 2919380637807128577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5362930200457729003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051836966652874207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b382b8012a86ab443bfebb3398777621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4677115515824032445
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +131,7 @@ GameObject:
   - component: {fileID: 3972469192212594433}
   - component: {fileID: 8282426667104501788}
   - component: {fileID: 6142798388530437255}
+  - component: {fileID: 6937484363851414851}
   - component: {fileID: 6449382837999261897}
   m_Layer: 0
   m_Name: Player
@@ -184,6 +198,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startHealthPoints: 100
+--- !u!114 &6937484363851414851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032998948425928616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0aee54082bca2347bfa73083bfc0149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &6449382837999261897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -427,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2634314175812581423, guid: 1919afb36bcc7354ca0aafaa08e305a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 2634314175812581423, guid: 1919afb36bcc7354ca0aafaa08e305a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -461,7 +487,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5051161209463997235, guid: 1919afb36bcc7354ca0aafaa08e305a6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
