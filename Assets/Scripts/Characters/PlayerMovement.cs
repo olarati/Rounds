@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : CharacterMovement
 {
- 
     private const string MovementHorizontalKey = "Horizontal";
 
     [SerializeField] private float _gravityMultiplier = 2f;
@@ -12,6 +11,7 @@ public class PlayerMovement : CharacterMovement
     [SerializeField] private float _jumpDuration = 1f;
 
     private Rigidbody _rigidbody;
+    private Camera _mainCamera;
 
     private bool _isGrounded;
     private bool _isJumping;
@@ -21,6 +21,7 @@ public class PlayerMovement : CharacterMovement
     protected override void OnInit()
     {
         _rigidbody = GetComponentInChildren<Rigidbody>();
+        _mainCamera = Camera.main;
     }
 
     private void FixedUpdate()
@@ -90,5 +91,22 @@ public class PlayerMovement : CharacterMovement
                 _isJumping = false;
             }
         }
+    }
+
+    private void Update()
+    {
+        if (!IsActive)
+        {
+            return;
+        }
+        LookRotation();
+    }
+
+    private void LookRotation()
+    {
+        Vector3 playerOnScreenPosition = _mainCamera.WorldToScreenPoint(_rigidbody.position);
+        float lookSign = Mathf.Sign(Input.mousePosition.x - playerOnScreenPosition.x);
+        float lookYEuler = lookSign * 90;
+        _rigidbody.rotation = Quaternion.Euler(0f, lookYEuler, 0f);
     }
 }
