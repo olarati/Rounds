@@ -268,37 +268,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6449382837999261897, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: m_Drag
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449382837999261897, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8032998948425928616, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282426667104501788, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: _jumpForce
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282426667104501788, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: _jumpSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282426667104501788, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: _movementForce
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282426667104501788, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: _movementSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282426667104501788, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: _gravityMultiplier
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
