@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b382b8012a86ab443bfebb3398777621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 10
+  _bulletPrefab: {fileID: 6599069975454262725, guid: 51c3d64182224b6499c28d7d74636942, type: 3}
+  _bulletDelay: 0.2
+  _bulletsInRow: 7
+  _reloadingDuration: 1
 --- !u!1 &4677115515824032445
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +137,7 @@ GameObject:
   - component: {fileID: 8282426667104501788}
   - component: {fileID: 6142798388530437255}
   - component: {fileID: 6937484363851414851}
+  - component: {fileID: 4004818532935436266}
   - component: {fileID: 6449382837999261897}
   m_Layer: 0
   m_Name: Player
@@ -210,6 +216,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0aee54082bca2347bfa73083bfc0149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4004818532935436266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032998948425928616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c3c6326459cc74caaf0d41b0afc2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoReloading: 1
 --- !u!54 &6449382837999261897
 Rigidbody:
   m_ObjectHideFlags: 0
