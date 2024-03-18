@@ -4,6 +4,7 @@ public class PlayerMovement : CharacterMovement
 {
     private const string MovementHorizontalKey = "Horizontal";
 
+    [SerializeField] private float _extraGravityMultiplier = 2f;
     [SerializeField] private float _movementSpeed = 20f;
 
     [SerializeField] private float _jumpForce = 45f;
@@ -25,13 +26,20 @@ public class PlayerMovement : CharacterMovement
 
     private void FixedUpdate()
     {
-        Vector3 startVelocity = _rigidbody.velocity;
+        ExtraGravity();
         if (!IsActive)
         {
             return;
         }
         Movement();
         Jumping();
+    }
+
+    private void ExtraGravity()
+    {
+        Vector3 gravity = Physics.gravity;
+        gravity *= _extraGravityMultiplier * Time.fixedDeltaTime;
+        _rigidbody.velocity += gravity;
 
     }
 
@@ -47,6 +55,12 @@ public class PlayerMovement : CharacterMovement
     }
 
     private void OnCollisionEnter(Collision collision)
+    {
+        _canJump = true;
+        _isJumping = false;
+    }
+
+    private void OnCollisionStay(Collision collision)
     {
         _canJump = true;
         _isJumping = false;
