@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectHitPrefab: {fileID: 6597570747687438593, guid: e16ed88414b0c7c47a9919dfef06138b, type: 3}
-  _impulse: 22
+  _impulse: 80
   _lifeTime: 15
 --- !u!54 &7811478803954385336
 Rigidbody:
