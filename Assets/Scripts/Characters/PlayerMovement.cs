@@ -4,16 +4,15 @@ public class PlayerMovement : CharacterMovement
 {
     private const string MovementHorizontalKey = "Horizontal";
 
-    [SerializeField] private float _gravityMultiplier = 2f;
-    [SerializeField] private float _movementSpeed = 6f;
+    [SerializeField] private float _movementSpeed = 20f;
 
-    [SerializeField] private float _jumpSpeed = 30f;
+    [SerializeField] private float _jumpForce = 45f;
     [SerializeField] private float _jumpDuration = 1f;
 
     private Rigidbody _rigidbody;
     private Camera _mainCamera;
 
-    private bool _isGrounded;
+    private bool _canJump;
     private bool _isJumping;
     private float _jumpTimer;
 
@@ -26,23 +25,14 @@ public class PlayerMovement : CharacterMovement
 
     private void FixedUpdate()
     {
-        Gravity();
+        Vector3 startVelocity = _rigidbody.velocity;
         if (!IsActive)
         {
             return;
         }
         Movement();
         Jumping();
-    }
-    private void Gravity()
-    {
-        if (_isGrounded)
-        {
-            return;
-        }
-        Vector3 gravity = Physics.gravity;
-        gravity *= _gravityMultiplier * Time.fixedDeltaTime;
-        _rigidbody.velocity += gravity;
+
     }
 
     private void Movement()
@@ -58,29 +48,18 @@ public class PlayerMovement : CharacterMovement
 
     private void OnCollisionEnter(Collision collision)
     {
-        _isGrounded = true;
+        _canJump = true;
         _isJumping = false;
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        _isGrounded = true;
-        _isJumping = false;
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        _isGrounded = false;
     }
 
     private void Jumping()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded && !_isJumping)
+        if (Input.GetKeyDown(KeyCode.Space) && _canJump && !_isJumping)
         {
-            _isGrounded = false;
+            _canJump = false;
             _isJumping = true;
             _jumpTimer = 0;
-            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpSpeed, 0f);
+            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _jumpForce, 0f);
         }
 
         if (_isJumping)
@@ -92,6 +71,7 @@ public class PlayerMovement : CharacterMovement
             }
         }
     }
+
 
     private void Update()
     {
