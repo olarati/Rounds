@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 6142798388530437255}
   - component: {fileID: 6937484363851414851}
   - component: {fileID: 4004818532935436266}
+  - component: {fileID: 6553652289443355366}
   - component: {fileID: 6449382837999261897}
   m_Layer: 0
   m_Name: Player
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902e65ac91bd3cc44892c38fbd929bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _extraGravityMultiplier: 10
   _movementSpeed: 20
   _jumpForce: 45
   _jumpDuration: 1
@@ -228,6 +230,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _autoReloading: 1
+--- !u!114 &6553652289443355366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032998948425928616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9725c391fc8a9e4a9fdef26e1d60f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _existingBonusTypes: 
 --- !u!54 &6449382837999261897
 Rigidbody:
   m_ObjectHideFlags: 0

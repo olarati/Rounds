@@ -21,13 +21,8 @@ public abstract class Character : MonoBehaviour
 
     private void InitDeath()
     {
-        for (int i = 0; i < _parts.Length; i++)
-        {
-            if (_parts[i] is CharacterHealth health)
-            {
-                health.OnDie += Stop;
-            }
-        }
+        var health = GetPart<CharacterHealth>();
+        health.OnDie += Stop;
     }
 
     private void Stop()
@@ -36,5 +31,17 @@ public abstract class Character : MonoBehaviour
         {
             _parts[i].Stop();
         }
+    }
+
+    private T GetPart<T>() where T : CharacterPart
+    {
+        for (int i = 0; i < _parts.Length; i++)
+        {
+            if (_parts[i] is T part)
+            {
+                return part;
+            }
+        }
+        return null;
     }
 }

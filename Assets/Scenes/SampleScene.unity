@@ -123,6 +123,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &178700595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178700597}
+  - component: {fileID: 178700596}
+  m_Layer: 0
+  m_Name: BonusDataAccesser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &178700596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178700595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdc842e3c39b7e40b602e4545a2f197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+  - _chance: 1
+    _type: 0
+  - _chance: 0.5
+    _type: 1
+  - _chance: 0.1
+    _type: 2
+--- !u!4 &178700597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178700595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 7621358942031082271, guid: 9647dba8ad888c1469386a4282a9a721, type: 3}
@@ -268,13 +319,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6553652289443355366, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
+      propertyPath: _existingBonusTypes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553652289443355366, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
+      propertyPath: _existingBonusTypes.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553652289443355366, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
+      propertyPath: _existingBonusTypes.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8032998948425928616, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8282426667104501788, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
-      propertyPath: _extraGravityMultiplier
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -345,3 +404,4 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 8013239593239302908}
   - {fileID: 7299746726441673427}
+  - {fileID: 178700597}

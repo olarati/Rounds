@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
 
-public abstract class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour, IShootCountBonusDependent
 {
     [SerializeField] private int _damage = 10;
     [SerializeField] private Bullet _bulletPrefab;
@@ -16,11 +16,17 @@ public abstract class Weapon : MonoBehaviour
     private float _reloadingTimer;
     private bool _isShootDelayEnd;
     private bool _isReloading;
+    private int _shootCount;
 
     public Action<int, int> OnBulletsInRowChange;
     public Action OnEndReloading;
 
     public bool IsReloading => _isReloading;
+
+    public void SetShootCount(int value)
+    {
+        _shootCount = value;
+    }
 
     public void Init()
     {
@@ -62,12 +68,20 @@ public abstract class Weapon : MonoBehaviour
 
     protected void DoShoot()
     {
-        SpawnBullet(_bulletPrefab, _bulletSpawnPoint);
+        for (int i = 0; i < _shootCount; i++)
+        {
+            SpawnBullet(_bulletPrefab, _bulletSpawnPoint, GetShootAngle(i, _shootCount));
+        }
     }
 
-    private void SpawnBullet(Bullet prefab, Transform spawnPoint)
+    private void SpawnBullet(Bullet prefab, Transform spawnPoint, float extraAngle)
     {
         Bullet bullet = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+
+        Vector3 bulletEulerAngles = bullet.transform.eulerAngles;
+        bulletEulerAngles.x += extraAngle;
+        bullet.transform.eulerAngles = bulletEulerAngles;
+
         InitBullet(bullet);
     }
 
@@ -107,5 +121,29 @@ public abstract class Weapon : MonoBehaviour
         _reloadingTimer = 0;
         _currentBulletsInRow = _bulletsInRow;
         OnBulletsInRowChange?.Invoke(_currentBulletsInRow, _bulletsInRow);
+    }
+
+    private float GetShootAngle(int shootId, int shootCount)
+    {
+        float startAngle = 0;
+        float stepAngle = 0;
+        switch (shootCount)
+        {
+            case 2:
+                startAngle = -3;
+                stepAngle = 6;
+                break;
+            case 3:
+                startAngle = -5;
+                stepAngle = 5;
+                break;
+            case 4:
+                startAngle = -6;
+                stepAngle = 4;
+                break;
+            default:
+                return 0;
+        }
+        return startAngle + stepAngle * shootId;
     }
 }
