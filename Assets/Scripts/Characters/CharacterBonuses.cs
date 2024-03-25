@@ -5,9 +5,9 @@ public abstract class CharacterBonuses : CharacterPart
 {
     [SerializeField] private List<BonusType> _existingBonusTypes;
 
-    private BonusApplyer[] _bonusApplyers = new BonusApplyer[]
+    private List<BonusApplyer> _bonusApplyers = new List<BonusApplyer>()
     {
-        new ShootCountBonusApplyer()
+        new ShootCountBonusApplyer(),
     };
 
     public void AddBonus(BonusType type)
@@ -17,7 +17,8 @@ public abstract class CharacterBonuses : CharacterPart
 
     protected override void OnInit()
     {
-        for (int i = 0; i < _bonusApplyers.Length; i++)
+        _bonusApplyers.AddRange(GetComponentsInChildren<BonusApplyer>());
+        for (int i = 0; i < _bonusApplyers.Count; i++)
         {
             _bonusApplyers[i].ApplyBonus(_existingBonusTypes, gameObject);
         }

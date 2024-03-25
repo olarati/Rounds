@@ -1,8 +1,7 @@
 using UnityEngine;
 using System;
-using Random = UnityEngine.Random;
 
-public abstract class Weapon : MonoBehaviour, IShootCountBonusDependent
+public abstract class Weapon : MonoBehaviour, IShootCountBonusDependent, IHitTypeBonusDependent
 {
     [SerializeField] private int _damage = 10;
     [SerializeField] private Bullet _bulletPrefab;
@@ -11,6 +10,7 @@ public abstract class Weapon : MonoBehaviour, IShootCountBonusDependent
     [SerializeField] private float _reloadingDuration = 4f;
 
     private Transform _bulletSpawnPoint;
+    private BulletHit _bulletHit;
     private int _currentBulletsInRow;
     private float _bulletTimer;
     private float _reloadingTimer;
@@ -26,6 +26,11 @@ public abstract class Weapon : MonoBehaviour, IShootCountBonusDependent
     public void SetShootCount(int value)
     {
         _shootCount = value;
+    }
+
+    public void SetHit(BulletHit hit)
+    {
+        _bulletHit = hit;
     }
 
     public void Init()
@@ -82,12 +87,7 @@ public abstract class Weapon : MonoBehaviour, IShootCountBonusDependent
         bulletEulerAngles.x += extraAngle;
         bullet.transform.eulerAngles = bulletEulerAngles;
 
-        InitBullet(bullet);
-    }
-
-    private void InitBullet(Bullet bullet)
-    {
-        bullet.SetDamage(_damage);
+        bullet.Init(_damage, _bulletHit);
     }
 
     private void Update()

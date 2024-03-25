@@ -10,4 +10,7 @@ public enum BonusType
     DoubleShoot,
     TripleShoot,
     QuadrupleShoot,
+    SmallExplosionHit,
+    MediumExplosionHit,
+    LargeExplosionHit,
 }

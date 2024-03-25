@@ -325,11 +325,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6553652289443355366, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
       propertyPath: _existingBonusTypes.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6553652289443355366, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
       propertyPath: _existingBonusTypes.Array.data[1]
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553652289443355366, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
+      propertyPath: _existingBonusTypes.Array.data[2]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8032998948425928616, guid: 128755f1f8872db4fb5b5018efb8daa7, type: 3}
       propertyPath: m_Name

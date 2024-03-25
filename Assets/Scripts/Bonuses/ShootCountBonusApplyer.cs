@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class ShootCountBonusApplyer : BonusApplyer
 {
-    public override void ApplyBonus(List<BonusType> existingBonusTypes, GameObject root)
+    public void ApplyBonus(List<BonusType> existingBonusTypes, GameObject root)
+    {
+        int shootCount = GetShootCount(existingBonusTypes);
+        Apply(shootCount, root);
+
+    }
+
+    private int GetShootCount(List<BonusType> existingBonusTypes)
     {
         int finalShootCount = 1;
         for (int i = 0; i < existingBonusTypes.Count; i++)
@@ -23,13 +30,20 @@ public class ShootCountBonusApplyer : BonusApplyer
             }
 
             // добавлено на случай, если в массиве бонусов будет несколько бонусов, и при этом в порядке не по возрастанию 
-            if(finalShootCount < shootCount)
+            if (finalShootCount < shootCount)
             {
                 finalShootCount = shootCount;
             }
         }
+        return finalShootCount;
+    }
 
-        IShootCountBonusDependent dependent = root.GetComponentInChildren<IShootCountBonusDependent>();
-        dependent.SetShootCount(finalShootCount);
+    private void Apply(int shootCount, GameObject root)
+    {
+        IShootCountBonusDependent[] dependents = root.GetComponentsInChildren<IShootCountBonusDependent>();
+        for (int i = 0; i < dependents.Length; i++)
+        {
+            dependents[i].SetShootCount(shootCount);
+        }
     }
 }

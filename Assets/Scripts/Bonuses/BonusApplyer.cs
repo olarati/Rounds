@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BonusApplyer
+public interface BonusApplyer
 {
-    public abstract void ApplyBonus(List<BonusType> existingBonusTypes, GameObject root);
+    void ApplyBonus(List<BonusType> existingBonusTypes, GameObject root);
 }
