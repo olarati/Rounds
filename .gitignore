@@ -13,7 +13,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /Assets/Polygon*
- 
+/Assets/Imported*
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #

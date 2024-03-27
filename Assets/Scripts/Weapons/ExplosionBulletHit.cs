@@ -14,6 +14,7 @@ public class ExplosionBulletHit : BulletHit
         CheckPhysicObjectHit(collidersInRange, bulletTransform, collision.contacts[0].point);
 
         GameObject hitSample = GameObject.Instantiate(HitPrefab, collision.contacts[0].point, Quaternion.identity);
+        hitSample.transform.localScale = Vector3.one * FinalHitType;
     }
 
     protected bool CheckCharacterHit(Collider[] colliders)
